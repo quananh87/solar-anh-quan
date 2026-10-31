@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải Pháp Pin Năng Lượng Mặt Trời & Lưu Trữ Hybrid</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0284c7; /* Xanh năng lượng */
+            --secondary: #eab308; /* Vàng mặt trời */
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Header & Banner */
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--secondary);
+        }
+
+        .hotline-btn {
+            background-color: var(--secondary);
+            color: var(--dark);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1200&q=80') center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+            opacity: 0.9;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: #64748b;
+        }
+
+        /* Products Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            height: 200px;
+            background: #cbd5e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-body h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+
+        .card-body p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .price-tag {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            background-color: var(--primary);
+            color: #fff;
+            text-align: center;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #0369a1;
+        }
+
+        /* Contact Section */
+        .contact-box {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+
+        .contact-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-box p {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+        }
+
+        .phone-big {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer {
+            background: var(--dark);
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">☀️ SOLAR POWER & STORAGE</div>
+        <a href="tel:0937677889" class="hotline-btn">📞 0937.677.889</a>
+    </header>
+
+    <div class="hero">
+        <h1>Giải Pháp Điện Mặt Trời & Lưu Trữ Đỉnh Cao</h1>
+        <p>Cung cấp hệ thống Inverter Hybrid, pin Lithium dung lượng cao chuyên dụng cho biệt thự, nhà xưởng và hộ gia đình. Tối ưu hóa 100% hóa đơn tiền điện.</p>
+        <a href="tel:0937677889" class="btn" style="max-width: 250px; margin: 0 auto; background: var(--secondary); color: var(--dark);">Tư Vấn Báo Giá Ngay</a>
+    </div>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>Sản Phẩm & Giải Pháp Tiêu Biểu</h2>
+            <p>Thiết bị chính hãng, hiệu suất cao, bảo hành dài hạn</p>
+        </div>
+
+        <div class="grid">
+            <!-- Sản phẩm 1 -->
+            <div class="card">
+                <div class="card-img">🔋</div>
+                <div class="card-body">
+                    <h3>Pin Lưu Trữ Lithium 10kWh - 16kWh</h3>
+                    <p>Chuyên dùng cho gia đình xài 2-3 máy lạnh xuyên đêm, Cell Grade A độ xả sâu DOD 90%, tuổi thọ trên 10 năm.</p>
+                    <div class="price-tag">Liên hệ báo giá</div>
+                    <a href="tel:0937677889" class="btn">Nhận Tư Vấn Kỹ Thuật</a>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 2 -->
+            <div class="card">
+                <div class="card-img">⚡</div>
+                <div class="card-body">
+                    <h3>Hệ Thống Pin Lưu Trữ 20kWh - 30kWh</h3>
+                    <p>Giải pháp hoàn hảo cho biệt thự, nhà xưởng chạy 4 máy lạnh xuyên đêm và dự phòng cúp điện dài ngày.</p>
+                    <div class="price-tag">Giải pháp tối ưu</div>
+                    <a href="tel:0937677889" class="btn">Nhận Tư Vấn Kỹ Thuật</a>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 3 -->
+            <div class="card">
+                <div class="card-img">☀️</div>
+                <div class="card-body">
+                    <h3>Tấm Pin Năng Lượng Mặt Trời High-Power</h3>
+                    <p>Hiệu suất chuyển đổi cao, khung nhôm chống chịu bão gió tốt, thích hợp lắp đặt mái nhà phố, nhà xưởng.</p>
+                    <div class="price-tag">Hàng chính hãng</div>
+                    <a href="tel:0937677889" class="btn">Nhận Tư Vấn Kỹ Thuật</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <h3>Cần Khảo Sát & Lên Giải Pháp Thiết Kế Riêng Cho Công Trình?</h3>
+            <p>Đội ngũ kỹ thuật thực chiến sẵn sàng bóc tách con số logic, tối ưu chi phí đầu tư và thu hồi vốn nhanh nhất cho anh/chị.</p>
+            <a href="tel:0937677889" class="phone-big">📞 0937.677.889</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Giải Pháp Năng Lượng Mặt Trời & Lưu Trữ Thông Minh. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
